@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+}
+
+/*::-webkit-scrollbar { 
+    display: none; 
+}*/
+
+body {
+  background: url(media/bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-family: Helvetica, Tahoma;
+  overflow-x: hidden; 
+  box-sizing: border-box; 
+  text-align: justify;
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 45px; 
+
+  top: 0;
+  right: 0;
+
+  color: white;
+  box-shadow: 0 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+nav {
+  background-color: white;
+  padding: 0 300px 0 300px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a, nav li p {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  box-shadow: inset 0 -5px 0 rgb(100, 200, 32);
+}
+
+.active {
+  color: white;
+  background-color: rgb(100, 200, 32);
+}
+
+.folding {
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.folding:hover {
+  pointer-events: all;
+}
+
+.folding .active {
+   pointer-events: all; 
+}
+
+.label {
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.item {
+  position: relative;
+  display: inline-block;
+  right: 50px;
+  opacity: 0;
+  max-width: 0;
+  transition: opacity 0.25s ease, right 0.25s ease, max-width 0.5s ease;
+  transition-delay: 0;
+}
+
+.item a {
+  transition: background-color 0.5s ease;
+}
+
+.folding:hover .item {
+  right: 0;
+  opacity: 1;
+  max-width: 100%;
+  transition: opacity 1.0s ease, right 0.5s ease, max-width 3.0s ease;  
+  transition-delay: 0; 
+}
+
+/* Header */
+
+header {
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 200px 0 150px 0;
+  text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
+
+header.home {
+  background: url(media/bg-home.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header.ondas {
+  background: url(media/mare.png);
+  background-size: cover;
+  background-position: center;
+}
+
+header.solar {
+  background: url(media/solar1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header.eolica {
+  background: url(media/turbina.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header.hidro {
+  background: url(media/repressa.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header.bio {
+  background: url(media/bio.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header.geo {
+  background: url(media/geo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header.contato {
+  background: url(media/bg-home.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.titletext {
+  font-size: 300%;
+}
+
+.titlesubtext {
+  width: 50%;
+  font-size: 150%;
+  margin: auto;
+}
+
+/* artigo */
+
+article {
+  background-color: white;
+  margin: 75px 300px 100px 300px; 
+  padding: 40px 75px 75px 75px; 
+  color: black; 
+}
+
+article ul {
+  list-style: none;
+}
+
+article ul span {
+  line-height: 0.25;
+}
+
+article li {
+  padding-left: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 150%;
+  padding-bottom: 25px;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  padding: 0 4px;
+}
+
+/* Table Geotermica */
+
+table {
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+td {
+  width: 50%;
+}
+
+td.left {
+  padding-right: 10px;
+}
+
+td.right {
+  padding-left: 10px;
+}
+
+td.bottom {
+  padding-top: 10px;
+}
+
+td.topalign {
+  vertical-align: top;
+}
+
+td img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+h2 {
+  padding-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+ol.info { 
+  padding-left: 1.5em; 
+}
+
+li.info {
+  padding-left: 0.5em; 
+  margin-bottom: 5px; 
+}
+
+/* Grid home */
+
+.griditem {
+  width: 100%;
+  height: 250px;
+  border-radius: 3px;
+  margin-top: 8px;
+}
+
+.griditem.solar {
+  background-image: url(media/solar1.jpg);
+  background-size: cover;
+}
+
+.griditem.eolica {
+  background-image: url(media/turbina.jpg);
+  background-size: cover;
+}
+
+.griditem.hidro {
+  background-image: url(media/hidrica.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.griditem.bio {
+  background-image: url(media/bio2.jpg);
+  background-size: cover;
+}
+
+.griditem.geo {
+  background-image: url(media/geoTERMICA.jpg);
+  background-size: cover;
+}
+
+.griditem.ondas {
+  background-image: url(media/ondasmares.jpg);
+  background-size: cover;
+}
+
+.griditem .overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.griditem a {
+  text-decoration: none;
+}
+
+.griditem .overlay p {
+  padding-top: 210px;
+  padding-left: 25px;
+
+  color: white;
+  font-size: 125%;
+  font-weight: bold;
+
+  text-shadow: 2px 2px rgba(0,0,0,0.5); 
+}
+
+.griditem .overlay:hover {
+  background-color: rgba(255,255,255,0.25);
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  padding: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: darkgray;
+  background-color: rgb(40, 40, 45);
+  display: flex;
+}
+
+footer ul {
+  list-style: none;
+  width: 50%;
+}
+
+footer li {
+  color: gray;
+  line-height: 1;
+}
+
+footer li a {
+  color: gray;
+  text-decoration: none;
+}

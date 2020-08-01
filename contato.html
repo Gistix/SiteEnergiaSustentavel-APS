@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contato</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="contato">
+		<h1 class="titletext">Contato</h1>
+	</header> 
+
+	<article>
+		<div class="text1">
+			<p class="title">Contato</p>
+			
+			<p>Dúvidas ou sugestões? Entre em contato conosco utilizando o formulário abaixo.</p>
+
+			<br>
+
+			<form name="formContato" method="POST" action="enviar_email.php">
+				<p>
+					Nome: <input type="text" name="Nome"> <br><br>
+					E-mail: <input type="email" name="email"> <br><br>
+					Mensagem:
+				</p>
+
+<br>
+
+				<textarea name="Mensagem" id="Mensagem" cols="100" rows="15"></textarea>
+				<br>
+			<br>
+					<input type="submit" name="button" id="button" value="Enviar Mensagem" />
+			
+			</form>
+		</div>
+
+	</article> 				
+
+	<footer>
+		<ul>
+			<p>FONTES DE ENERGIA RENOVÁVEL</p>
+			<li><p><a href="home.html">Home</a></p></li>	
+			<li><p><a href="contato.html">Contato</a></p></li>
+		</ul>	
+
+		<ul>		
+			<p>SOBRE</p>
+			<li><br></li>			
+			<li><p>Trabalho de APS Ciência da Computação 2019, UNIP.</p></li>			
+		</ul>			
+	</footer>
+
+	<div class="menu">
+		<nav>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+
+				<div class="folding">
+					<li class="label"><p>Energia</p></li>	
+					<li class="item"><a href="solar.html">Solar</a></li>	
+					<li class="item"><a href="eolica.html">Eólica</a></li>
+					<li class="item"><a href="hidro.html">Hídrica</a></li>	
+					<li class="item"><a href="bio.html">Biomassa</a></li>	
+					<li class="item"><a href="geo.html">Geotérmica</a></li>	
+					<li class="item"><a href="ondas.html">Ondomotriz</a></li>					
+				</div>	
+
+				<li><a href="contato.html" class="active">Contato</a></li>								
+			</ul>
+		</nav>
+	</div> 
+</body>
+</html>
